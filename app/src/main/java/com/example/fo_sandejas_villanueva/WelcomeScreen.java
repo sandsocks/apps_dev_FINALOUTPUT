@@ -17,10 +17,13 @@ public class WelcomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button button=findViewById(R.id.login_registerButton);
-        button.setOnClickListener(view -> {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            Intent intent=new Intent(WelcomeScreen.this,LoginRegisterScreen.class);
-            startActivity(intent);
+                Intent intent=new Intent(WelcomeScreen.this,LoginRegisterScreen.class);
+                startActivity(intent);
+            }
         });
 
     }
