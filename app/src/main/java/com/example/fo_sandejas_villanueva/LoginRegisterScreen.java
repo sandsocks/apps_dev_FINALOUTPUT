@@ -13,15 +13,22 @@ public class LoginRegisterScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.loginregister_screen);
 
-        Button button=findViewById(R.id.login_registerButton);
+        Button button=findViewById(R.id.registerButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent=new Intent(LoginRegisterScreen.this,LoginScreen.class);
+                Intent intent=new Intent(LoginRegisterScreen.this,RegisterScreen.class);
                 startActivity(intent);
+            }
+        });
+        button=findViewById(R.id.loginButton);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(LoginRegisterScreen.this,LoginScreen.class);
             }
         });
     }

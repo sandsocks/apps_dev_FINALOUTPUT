@@ -14,7 +14,7 @@ public class WelcomeScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.welcome_screen);
 
         Button button=findViewById(R.id.login_registerButton);
         button.setOnClickListener(new View.OnClickListener() {
