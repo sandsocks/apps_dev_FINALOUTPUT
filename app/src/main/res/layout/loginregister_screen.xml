@@ -9,7 +9,7 @@
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log In"
+        android:text="@string/login_button_text"
         tools:layout_editor_absoluteX="64dp"
         tools:layout_editor_absoluteY="116dp"
         tools:ignore="MissingConstraints" />
@@ -18,7 +18,7 @@
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="@string/register_button_text"
         tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="240dp"
         tools:ignore="MissingConstraints" />

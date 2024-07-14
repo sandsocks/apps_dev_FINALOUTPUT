@@ -1,4 +1,4 @@
-package com.example.fo_sandejas_villanueva;
+package layout.fo_sandejas_villanueva;
 
 import org.junit.Test;
 
@@ -12,6 +12,6 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+        Assert.assertEquals(4, 2 + 2);
     }
 }

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FO_SANDEJAS_VILLANUEVA</string>
+    <string name="login_button_text">Log In</string>
+    <string name="register_button_text">Register</string>
+    <string name="TextView6_text">Username</string>
+    <string name="TextView7_text">Password</string>
+    <string name="textView3_text">Name of Bean</string>
+    <string name="textView_text">Password</string>
+    <string name="textView2_text">Username</string>
+    <string name="registerToHomescreen_button_text">Confirm</string>
+    <string name="text_text">Enter here...</string>
 </resources>
