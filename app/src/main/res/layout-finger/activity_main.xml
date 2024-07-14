@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
 android:orientation="vertical"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#FFF6E8">
 
-    <Button
-        android:id="@+id/login_registerButton"
-        android:layout_width="174dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/opening_page"/>
+
+    <ImageButton
+        android:id="@+id/start_button"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="113dp"
-        android:text="Press to Play"
-        tools:ignore="HardcodedText" />
+        android:layout_marginBottom="-500dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Start"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/start_button" />
+
+
+
 </RelativeLayout>

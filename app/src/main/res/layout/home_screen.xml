@@ -1,6 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFF6E8">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/home_page"
+        android:scaleType="centerCrop"/>
+
+
+    <ImageButton
+        android:id="@+id/bath_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-5dp"
+        android:layout_marginBottom="-10dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Bath"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/bath_button" />
+
+
+    <ImageButton
+        android:id="@+id/play_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-5dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Play"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/Play_Button" />
+
+    <ImageButton
+        android:id="@+id/nap_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="260dp"
+        android:layout_marginBottom="-10dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Nap"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/Nap_Button" />
+
+
+    <ImageButton
+        android:id="@+id/eat_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="260dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Eat"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/Eat_Button" />
+</RelativeLayout>
