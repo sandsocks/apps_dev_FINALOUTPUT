@@ -66,6 +66,21 @@
 
     <!-- Love Meter -->
 
+    <EditText
+        android:id="@+id/loveMeter"
+        style="@style/NoUnderlineEditText"
+        android:layout_width="110dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:inputType="number"
+        android:hint="~"
+        android:textColor="#745E3C"
+        android:textSize="60sp"
+        android:textStyle="bold"/>
+
     <ProgressBar
         android:id="@+id/loveBar"
         style="?android:attr/progressBarStyleHorizontal"
