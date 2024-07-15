@@ -10,11 +10,10 @@
 
     <ImageView
         android:id="@+id/backgroundImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/home_page"
-        android:scaleType="centerCrop"/>
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/home_page" />
 
     <ImageButton
         android:id="@+id/bath_button"
@@ -70,16 +69,29 @@
     <EditText
         android:id="@+id/loveMeter"
         style="@style/NoUnderlineEditText"
-        android:layout_width="288dp"
-        android:layout_height="92dp"
+        android:layout_width="110dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
+        android:fontFamily="casual"
         android:inputType="number"
-        android:text="100" />
+        android:textColor="#745E3C"
+        android:textSize="60sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="229dp"
-        android:layout_height="178dp"
+        android:layout_width="121dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="10dp"
         app:srcCompat="@drawable/love_image" />
+
+    <ImageView
+        android:id="@+id/cat_image"
+        android:layout_width="match_parent"
+        android:layout_height="481dp"
+        android:layout_marginTop="300dp"
+        app:srcCompat="@drawable/main_cat" />
 
 </RelativeLayout>
