@@ -38,7 +38,7 @@
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="Play"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/play_button" />
+        app:srcCompat="@drawable/play_button"/>
 
     <ImageButton
         android:id="@+id/nap_button"
@@ -50,7 +50,7 @@
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="Nap"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/nap_button" />
+        app:srcCompat="@drawable/nap_button"/>
 
     <ImageButton
         android:id="@+id/eat_button"
@@ -62,7 +62,7 @@
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="Eat"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/eat_button" />
+        app:srcCompat="@drawable/eat_button"/>
 
     <!-- Love Meter -->
 
@@ -76,9 +76,10 @@
         android:ems="10"
         android:fontFamily="casual"
         android:inputType="number"
+        android:hint="~"
         android:textColor="#745E3C"
         android:textSize="60sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <ProgressBar
         android:id="@+id/loveBar"
@@ -95,6 +96,7 @@
         android:layout_width="121dp"
         android:layout_height="106dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="Heart"
         app:srcCompat="@drawable/love_image" />
 
     <ImageView

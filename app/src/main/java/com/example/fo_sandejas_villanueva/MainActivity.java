@@ -6,12 +6,11 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    @SuppressLint("MissingInflatedId")
+    //@SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,13 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
     /*protected void onStart*/
 
-        ImageButton button=findViewById(R.id.start_button);
+        ImageButton button = (ImageButton) findViewById(R.id.start_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                Intent intent=new Intent(MainActivity.this,HomeScreen.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, HomeScreen.class));
             }
         });
 
