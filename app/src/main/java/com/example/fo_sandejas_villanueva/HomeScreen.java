@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -12,6 +13,7 @@ import android.widget.ProgressBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeScreen extends AppCompatActivity {
+    private EditText loveInput;
     private ProgressBar loveBar;
     private Handler handler = new Handler();
     private int love = 100;
@@ -34,7 +36,8 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loveBar = findViewById(R.id.loveMeter);
+        loveInput = findViewById(R.id.loveMeter);
+        loveBar = findViewById(R.id.loveBar);
 
         imageView = findViewById(R.id.cat_image);
 
@@ -197,7 +200,6 @@ public class HomeScreen extends AppCompatActivity {
                 }
             }
         }, 5000);
+
     }
-
-
 }
