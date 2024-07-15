@@ -54,7 +54,8 @@ public class HomeScreen extends AppCompatActivity {
         bath.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bathCat();
+                bathCatImage();
+                bathCatIncrease();
                 playAudio(mediaPlayerShower);
             }
         });
@@ -62,7 +63,8 @@ public class HomeScreen extends AppCompatActivity {
         feed.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                feedCat();
+                feedCatImage();
+                feedCatIncrease();
                 playAudio(mediaPlayerEat);
             }
         });
@@ -70,7 +72,8 @@ public class HomeScreen extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                playCat();
+                playCatImage();
+                playCatIncrease();
                 playAudio(mediaPlayerPlay);
             }
         });
@@ -78,14 +81,15 @@ public class HomeScreen extends AppCompatActivity {
         nap.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                sleepCat();
+                sleepCatImage();
+                sleepCatIncrease();
                 playAudio(mediaPlayerSleep);
             }
         });
     }
 
     /*image change*/
-    private void sleepCat(){
+    private void sleepCatImage(){
         imageView.setImageResource(R.drawable.cat_sleep);
 
         handler.postDelayed(new Runnable() {
@@ -97,7 +101,7 @@ public class HomeScreen extends AppCompatActivity {
         }, 2000); // Change back after 2 seconds
     }
 
-    private void playCat(){
+    private void playCatImage(){
         imageView.setImageResource(R.drawable.cat_play);
 
         handler.postDelayed(new Runnable() {
@@ -109,7 +113,7 @@ public class HomeScreen extends AppCompatActivity {
         }, 2000); // Change back after 2 seconds
     }
 
-    private void feedCat(){
+    private void feedCatImage(){
         imageView.setImageResource(R.drawable.cat_eat);
 
         handler.postDelayed(new Runnable() {
@@ -121,7 +125,7 @@ public class HomeScreen extends AppCompatActivity {
         }, 2000); // Change back after 2 seconds
     }
 
-    private void bathCat() {
+    private void bathCatImage() {
         imageView.setImageResource(R.drawable.cat_wash);
 
         handler.postDelayed(new Runnable() {
@@ -149,6 +153,36 @@ public class HomeScreen extends AppCompatActivity {
         if (mediaPlayerPlay != null) mediaPlayerPlay.release();
         if (mediaPlayerShower != null) mediaPlayerShower.release();
         if (mediaPlayerSleep != null) mediaPlayerSleep.release();
+    }
+
+    /*love bar increase*/
+    private void feedCatIncrease(){
+        love += 5;
+        if(love> loveBar.getMax()){
+            love = loveBar.getMax();
+        }
+        loveBar.setProgress(love);
+    }
+    private void sleepCatIncrease(){
+        love += 5;
+        if(love> loveBar.getMax()){
+            love = loveBar.getMax();
+        }
+        loveBar.setProgress(love);
+    }
+    private void playCatIncrease(){
+        love += 5;
+        if(love> loveBar.getMax()){
+            love = loveBar.getMax();
+        }
+        loveBar.setProgress(love);
+    }
+    private void bathCatIncrease(){
+        love += 5;
+        if(love> loveBar.getMax()){
+            love = loveBar.getMax();
+        }
+        loveBar.setProgress(love);
     }
 
     /*love bar decrease over time*/
