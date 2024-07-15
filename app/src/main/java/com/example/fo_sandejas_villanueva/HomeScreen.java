@@ -1,6 +1,7 @@
 package com.example.fo_sandejas_villanueva;
 
 import android.annotation.SuppressLint;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -22,6 +23,11 @@ public class HomeScreen extends AppCompatActivity {
     private ImageButton nap;
     private ImageButton play;
 
+    private MediaPlayer mediaPlayerEat;
+    private MediaPlayer mediaPlayerPlay;
+    private MediaPlayer mediaPlayerShower;
+    private MediaPlayer mediaPlayerSleep;
+
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +35,27 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         loveBar = findViewById(R.id.loveMeter);
+
         imageView = findViewById(R.id.cat_image);
+
         bath = findViewById(R.id.bath_button);
         feed = findViewById(R.id.eat_button);
         play = findViewById(R.id.play_button);
         nap = findViewById(R.id.nap_button);
 
+        mediaPlayerEat = MediaPlayer.create(this, R.raw.eat);
+        mediaPlayerPlay = MediaPlayer.create(this, R.raw.play);
+        mediaPlayerShower = MediaPlayer.create(this, R.raw.shower);
+        mediaPlayerSleep = MediaPlayer.create(this, R.raw.sleep);
+
         LoveDecreasing();
 
+        /*buttons*/
         bath.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bathCat();
+                playAudio(mediaPlayerShower);
             }
         });
 
@@ -48,6 +63,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 feedCat();
+                playAudio(mediaPlayerEat);
             }
         });
 
@@ -55,6 +71,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 playCat();
+                playAudio(mediaPlayerPlay);
             }
         });
 
@@ -62,10 +79,12 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sleepCat();
+                playAudio(mediaPlayerSleep);
             }
         });
     }
 
+    /*image change*/
     private void sleepCat(){
         imageView.setImageResource(R.drawable.cat_sleep);
 
@@ -114,6 +133,25 @@ public class HomeScreen extends AppCompatActivity {
         }, 2000); // Change back after 2 seconds
     }
 
+    /*audio*/
+    private void playAudio(MediaPlayer mediaPlayer){
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+        }
+        mediaPlayer.start();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayerEat != null) mediaPlayerEat.release();
+        if (mediaPlayerPlay != null) mediaPlayerPlay.release();
+        if (mediaPlayerShower != null) mediaPlayerShower.release();
+        if (mediaPlayerSleep != null) mediaPlayerSleep.release();
+    }
+
+    /*love bar decrease over time*/
     private void LoveDecreasing() {
         handler.postDelayed(new Runnable() {
             @Override
@@ -121,9 +159,11 @@ public class HomeScreen extends AppCompatActivity {
                 if (love > 0) {
                     love--;
                     loveBar.setProgress(love);
-                    handler.postDelayed(this, 5000); 
+                    handler.postDelayed(this, 5000);
                 }
             }
         }, 5000);
     }
+
+
 }
