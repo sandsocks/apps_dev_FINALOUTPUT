@@ -43,6 +43,63 @@ public class HomeScreen extends AppCompatActivity {
                 bathCat();
             }
         });
+
+        feed.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                feedCat();
+            }
+        });
+
+        play.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                playCat();
+            }
+        });
+
+        nap.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                sleepCat();
+            }
+        });
+    }
+
+    private void sleepCat(){
+        imageView.setImageResource(R.drawable.cat_sleep);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                imageView.setImageResource(R.drawable.main_cat);
+
+            }
+        }, 2000); // Change back after 2 seconds
+    }
+
+    private void playCat(){
+        imageView.setImageResource(R.drawable.cat_play);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                imageView.setImageResource(R.drawable.main_cat);
+
+            }
+        }, 2000); // Change back after 2 seconds
+    }
+
+    private void feedCat(){
+        imageView.setImageResource(R.drawable.cat_eat);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                imageView.setImageResource(R.drawable.main_cat);
+
+            }
+        }, 2000); // Change back after 2 seconds
     }
 
     private void bathCat() {
@@ -52,6 +109,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void run() {
                 imageView.setImageResource(R.drawable.main_cat);
+
             }
         }, 2000); // Change back after 2 seconds
     }
@@ -63,7 +121,7 @@ public class HomeScreen extends AppCompatActivity {
                 if (love > 0) {
                     love--;
                     loveBar.setProgress(love);
-                    handler.postDelayed(this, 5000); // Decrease love every 5 seconds
+                    handler.postDelayed(this, 5000); 
                 }
             }
         }, 5000);
