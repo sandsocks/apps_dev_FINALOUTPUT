@@ -16,7 +16,7 @@ public class LoginRegisterScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginregister_screen);
 
-        ImageButton button=findViewById(R.id.login_page_button);
+        ImageButton button=findViewById(R.id.login_startpage_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -25,7 +25,7 @@ public class LoginRegisterScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        button=findViewById(R.id.register_page_button);
+        button=findViewById(R.id.register_startpage_button);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/backgroundImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/home_page"
@@ -39,7 +39,7 @@
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="Play"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/Play_Button" />
+        app:srcCompat="@drawable/play_button" />
 
     <ImageButton
         android:id="@+id/nap_button"
@@ -51,8 +51,7 @@
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="Nap"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/Nap_Button" />
-
+        app:srcCompat="@drawable/nap_button" />
 
     <ImageButton
         android:id="@+id/eat_button"
@@ -64,5 +63,23 @@
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="Eat"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/Eat_Button" />
+        app:srcCompat="@drawable/eat_button" />
+
+    <!-- Love Meter -->
+
+    <EditText
+        android:id="@+id/loveMeter"
+        style="@style/NoUnderlineEditText"
+        android:layout_width="288dp"
+        android:layout_height="92dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="100" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="229dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/love_image" />
+
 </RelativeLayout>
